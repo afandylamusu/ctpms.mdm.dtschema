@@ -3,7 +3,7 @@ package article
 import (
 	"context"
 
-	"github.com/bxcodec/go-clean-arch/models"
+	"github.com/afandylamusu/ctpms.mdm.dtschea/models"
 )
 
 // Usecase represent the article's usecases

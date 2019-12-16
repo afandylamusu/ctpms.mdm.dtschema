@@ -3,7 +3,7 @@ package author
 import (
 	"context"
 
-	"github.com/bxcodec/go-clean-arch/models"
+	"github.com/afandylamusu/ctpms.mdm.dtschema/models"
 )
 
 // Repository represent the author's repository contract

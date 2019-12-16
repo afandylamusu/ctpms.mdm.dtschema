@@ -4,7 +4,7 @@ package mocks
 import (
 	context "context"
 
-	models "github.com/bxcodec/go-clean-arch/models"
+	models "github.com/afandylamusu/ctpms.mdm.dtschema/models"
 	mock "github.com/stretchr/testify/mock"
 )
 

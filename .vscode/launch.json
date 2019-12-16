@@ -5,14 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch test function",
+            "name": "Debug Test",
             "type": "go",
             "request": "launch",
             "mode": "test",
             "program": "${workspaceFolder}",
             "args": [
-                "-test.run",
-                "MyTestFunction"
+                "-v",
+                "-cover",
+                "-covermode=atomic"
             ]
         },
         {

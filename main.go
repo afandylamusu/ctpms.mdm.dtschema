@@ -12,11 +12,11 @@ import (
 	"github.com/labstack/echo"
 	"github.com/spf13/viper"
 
-	_articleHttpDeliver "github.com/bxcodec/go-clean-arch/article/delivery/http"
-	_articleRepo "github.com/bxcodec/go-clean-arch/article/repository"
-	_articleUcase "github.com/bxcodec/go-clean-arch/article/usecase"
-	_authorRepo "github.com/bxcodec/go-clean-arch/author/repository"
-	"github.com/bxcodec/go-clean-arch/middleware"
+	_articleHttpDeliver "github.com/afandylamusu/ctpms.mdm.dtschema/article/delivery/http"
+	_articleRepo "github.com/afandylamusu/ctpms.mdm.dtschema/article/repository"
+	_articleUcase "github.com/afandylamusu/ctpms.mdm.dtschema/article/usecase"
+	_authorRepo "github.com/afandylamusu/ctpms.mdm.dtschema/author/repository"
+	"github.com/afandylamusu/ctpms.mdm.dtschema/middleware"
 )
 
 func init() {

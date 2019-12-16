@@ -2,19 +2,21 @@ version: "2.3"
 services:
   web:
     image: afandy/mdm_dtschema
-    container_name: article_management_api
+    container_name: ctp_mdm_dtschema_api
     ports:
       - 9090:9090
     depends_on:
       - mysql
+      - postgre
     volumes:
       - ./config.json:/app/config.json
+      
   mysql:
     image: mysql:5.7 
-    container_name: go_clean_arch_mysql
+    container_name: ctp_mysql
     command: mysqld --user=root
     volumes:
-      - ./article.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./mysql_article.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - 3306:3306
     environment:
@@ -22,4 +24,27 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
       - MYSQL_ROOT_PASSWORD=root
-
+  
+  postgre:
+    image: postgres:9.6-alpine
+    container_name: ctp_postgre
+    # volumes:
+    #   - ./postgre_data:/var/lib/postgresql/data
+    #   - ./article.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: article
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: p@assw0rd
+      
+  pgadmin4:
+    image: dpage/pgadmin4
+    container_name: ctp_pgadmin4
+    ports:
+      - "5433:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@ctp.com
+      - PGADMIN_DEFAULT_PASSWORD=rahas1a
+    depends_on:
+        - postgre

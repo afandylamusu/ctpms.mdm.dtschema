@@ -1,6 +1,6 @@
 {
   "debug": true,
-  "env":"local",
+  "env": "local",
   "server": {
     "address": ":9090"
   },
@@ -8,7 +8,7 @@
     "timeout": 2
   },
   "database-local": {
-    "host": "0.0.0.0",
+    "host": "192.168.99.100",
     "port": "3306",
     "user": "user",
     "pass": "password",
