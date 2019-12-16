@@ -1,0 +1,24 @@
+{
+  "debug": true,
+  "env":"local",
+  "server": {
+    "address": ":9090"
+  },
+  "context": {
+    "timeout": 2
+  },
+  "database-local": {
+    "host": "0.0.0.0",
+    "port": "3306",
+    "user": "user",
+    "pass": "password",
+    "name": "article"
+  },
+  "database": {
+    "host": "mysql",
+    "port": "3306",
+    "user": "user",
+    "pass": "password",
+    "name": "article"
+  }
+}
