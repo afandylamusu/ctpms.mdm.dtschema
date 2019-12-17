@@ -2,13 +2,15 @@
   "debug": true,
   "env": "local",
   "server": {
-    "address": ":9090"
+    "http-port": ":9090",
+    "grpc-port": ":9091",
+    "graphql-port": ":9092"
   },
   "context": {
     "timeout": 2
   },
   "database-local": {
-    "host": "192.168.99.100",
+    "host": "0.0.0.0",
     "port": "3306",
     "user": "user",
     "pass": "password",

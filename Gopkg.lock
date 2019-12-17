@@ -13,18 +13,10 @@
   version = "v1.5.0"
 
 [[projects]]
-  digest = "1:cbf79f871ed73de1a374e6669e3fb90a2d9318861408c7de4831dd59ee85948e"
+  digest = "1:840974fc70109c21d4f39c7203da2fcbe6424afaf28de8980a58cc11f30d2d7a"
   name = "github.com/bxcodec/go-clean-arch"
   packages = [
     "article",
-    "article/delivery/http",
-    "article/mocks",
-    "article/repository",
-    "article/usecase",
-    "author",
-    "author/mocks",
-    "author/repository",
-    "middleware",
     "models"
   ]
   pruneopts = "UT"
@@ -73,6 +65,20 @@
   pruneopts = "UT"
   revision = "72cd26f257d44c1114970e19afddcd812016007e"
   version = "v1.4.1"
+
+[[projects]]
+  digest = "1:f5ce1529abc1204444ec73779f44f94e2fa8fcdb7aca3c355b0c95947e4005c6"
+  name = "github.com/golang/protobuf"
+  packages = [
+    "proto",
+    "ptypes",
+    "ptypes/any",
+    "ptypes/duration",
+    "ptypes/timestamp"
+  ]
+  pruneopts = "UT"
+  revision = "6c65a5562fc06764971b7c5d05c76c75e84bdbf7"
+  version = "v1.3.2"
 
 [[projects]]
   digest = "1:c0d19ab64b32ce9fe5cf4ddceba78d5bc9807f0016db6b1183599da3dcc24d10"
@@ -284,9 +290,16 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:d1f7edf951b9cc444358a31de2f4e4c1c5c539ea9c6aca13f5bf92eb1124fc4b"
+  digest = "1:257a75d024975428ab9192bfc334c3490882f8cb21322ea5784ca8eca000a910"
   name = "golang.org/x/net"
-  packages = ["idna"]
+  packages = [
+    "http/httpguts",
+    "http2",
+    "http2/hpack",
+    "idna",
+    "internal/timeseries",
+    "trace"
+  ]
   pruneopts = "UT"
   revision = "c0dbc17a35534bf2e581d7a942408dc936316da4"
 
@@ -340,6 +353,58 @@
   version = "v1.6.5"
 
 [[projects]]
+  branch = "master"
+  digest = "1:583a0c80f5e3a9343d33aea4aead1e1afcc0043db66fdf961ddd1fe8cd3a4faf"
+  name = "google.golang.org/genproto"
+  packages = ["googleapis/rpc/status"]
+  pruneopts = "UT"
+  revision = "b31c10ee225f87dbb9f5f878ead9d64f34f5cbbb"
+
+[[projects]]
+  digest = "1:b59ce3ddb11daeeccccc9cb3183b58ebf8e9a779f1c853308cd91612e817a301"
+  name = "google.golang.org/grpc"
+  packages = [
+    ".",
+    "backoff",
+    "balancer",
+    "balancer/base",
+    "balancer/roundrobin",
+    "binarylog/grpc_binarylog_v1",
+    "codes",
+    "connectivity",
+    "credentials",
+    "credentials/internal",
+    "encoding",
+    "encoding/proto",
+    "grpclog",
+    "internal",
+    "internal/backoff",
+    "internal/balancerload",
+    "internal/binarylog",
+    "internal/buffer",
+    "internal/channelz",
+    "internal/envconfig",
+    "internal/grpcrand",
+    "internal/grpcsync",
+    "internal/resolver/dns",
+    "internal/resolver/passthrough",
+    "internal/syscall",
+    "internal/transport",
+    "keepalive",
+    "metadata",
+    "naming",
+    "peer",
+    "resolver",
+    "serviceconfig",
+    "stats",
+    "status",
+    "tap"
+  ]
+  pruneopts = "UT"
+  revision = "1a3960e4bd028ac0cec0a2afd27d7d8e67c11514"
+  version = "v1.25.1"
+
+[[projects]]
   digest = "1:c84a587136cb69cecc11f3dbe9f9001444044c0dba74997b07f7e4c150b07cda"
   name = "gopkg.in/DATA-DOG/go-sqlmock.v1"
   packages = ["."]
@@ -377,16 +442,9 @@
   input-imports = [
     "github.com/bxcodec/faker",
     "github.com/bxcodec/go-clean-arch/article",
-    "github.com/bxcodec/go-clean-arch/article/delivery/http",
-    "github.com/bxcodec/go-clean-arch/article/mocks",
-    "github.com/bxcodec/go-clean-arch/article/repository",
-    "github.com/bxcodec/go-clean-arch/article/usecase",
-    "github.com/bxcodec/go-clean-arch/author",
-    "github.com/bxcodec/go-clean-arch/author/mocks",
-    "github.com/bxcodec/go-clean-arch/author/repository",
-    "github.com/bxcodec/go-clean-arch/middleware",
     "github.com/bxcodec/go-clean-arch/models",
     "github.com/go-sql-driver/mysql",
+    "github.com/golang/protobuf/proto",
     "github.com/labstack/echo",
     "github.com/sirupsen/logrus",
     "github.com/spf13/viper",
@@ -394,6 +452,10 @@
     "github.com/stretchr/testify/mock",
     "github.com/stretchr/testify/require",
     "golang.org/x/sync/errgroup",
+    "google.golang.org/grpc",
+    "google.golang.org/grpc/codes",
+    "google.golang.org/grpc/keepalive",
+    "google.golang.org/grpc/status",
     "gopkg.in/DATA-DOG/go-sqlmock.v1",
     "gopkg.in/go-playground/validator.v9"
   ]
