@@ -3,7 +3,7 @@ package article
 import (
 	"context"
 
-	"github.com/afandylamusu/ctpms.mdm.dtschea/models"
+	"github.com/afandylamusu/ctpms.mdm.dtschema/models"
 )
 
 // Usecase represent the article's usecases

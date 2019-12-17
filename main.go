@@ -17,6 +17,7 @@ import (
 	_articleUcase "github.com/afandylamusu/ctpms.mdm.dtschema/article/usecase"
 	_authorRepo "github.com/afandylamusu/ctpms.mdm.dtschema/author/repository"
 	"github.com/afandylamusu/ctpms.mdm.dtschema/middleware"
+	"github.com/afandylamusu/ctpms.mdm.dtschema/dataset/delivery/delivergrpc"
 )
 
 func init() {
@@ -83,5 +84,9 @@ func main() {
 	au := _articleUcase.NewArticleUsecase(ar, authorRepo, timeoutContext)
 	_articleHttpDeliver.NewArticleHandler(e, au)
 
+	go delivergrpc.RunServer(":9091")
+
 	log.Fatal(e.Start(viper.GetString("server.address")))
+
+	<-make(chan int)
 }

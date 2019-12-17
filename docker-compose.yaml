@@ -28,9 +28,9 @@ services:
   postgre:
     image: postgres:9.6-alpine
     container_name: ctp_postgre
-    # volumes:
+    volumes:
     #   - ./postgre_data:/var/lib/postgresql/data
-    #   - ./article.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./postgre_dataset.sql:/docker-entrypoint-initdb.d/init_dataset.sql
     ports:
       - 5432:5432
     environment:

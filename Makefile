@@ -11,6 +11,9 @@ engine: vendor
 start: vendor
 	go run main.go
 
+proto:
+	protoc --go_out=plugins=grpc:. *.proto
+
 unittest:
 	go test -short  ./...
 
